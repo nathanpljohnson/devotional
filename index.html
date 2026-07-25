@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leadership &amp; the Kingdom — a thirty-five day reading</title>
+<meta name="description" content="A thirty-five day devotional on leadership, power, and political authority in Scripture, read alongside philosophy and literature.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Devotional">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta name="theme-color" content="#0d0f11" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efe9dd" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="bg" aria-hidden="true"><div id="bgimg"></div><div id="scrim"></div></div>
+
+<main id="page" tabindex="-1">
+  <article id="day"></article>
+</main>
+
+<nav id="bar">
+  <button id="prev" aria-label="Previous day">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button id="grid" class="wide" aria-label="Choose a day"><span id="barlabel">Day 1</span></button>
+  <button id="ppl" aria-label="People index">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></svg>
+  </button>
+  <button id="next" aria-label="Next day">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</nav>
+
+<div id="sheet" hidden>
+  <div id="sheetbg"></div>
+  <section id="sheetbody" role="dialog" aria-modal="true" aria-labelledby="sheettitle">
+    <header>
+      <h2 id="sheettitle"></h2>
+      <button id="sheetclose" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div id="sheetcontent"></div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

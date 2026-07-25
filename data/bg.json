@@ -1,0 +1,62 @@
+{
+ "w1a": {
+  "title": "iss071e062803",
+  "nasa_id": "iss071e062803",
+  "center": "JSC",
+  "credit": "NASA (public domain)"
+ },
+ "w1b": {
+  "title": "Ocean Sand, Bahamas",
+  "nasa_id": "GSFC_20171208_Archive_e001879",
+  "center": "GSFC",
+  "credit": "NASA (public domain)"
+ },
+ "w2a": {
+  "title": "Large-scale Fractal Motion of Clouds",
+  "nasa_id": "GSFC_20171208_Archive_e001880",
+  "center": "GSFC",
+  "credit": "NASA (public domain)"
+ },
+ "w2b": {
+  "title": "Icefall, Lambert Glacier, Antarctica",
+  "nasa_id": "GSFC_20171208_Archive_e002161",
+  "center": "GSFC",
+  "credit": "NASA (public domain)"
+ },
+ "w3a": {
+  "title": "A red-yellow airglow blankets Earth as the last rays of an orbital sunset illuminate the atmosphere",
+  "nasa_id": "iss073e0982783",
+  "center": "JSC",
+  "credit": "NASA (public domain)"
+ },
+ "w3b": {
+  "title": "iss062e148363",
+  "nasa_id": "iss062e148363",
+  "center": "JSC",
+  "credit": "NASA (public domain)"
+ },
+ "w4a": {
+  "title": "Himalayas",
+  "nasa_id": "GSFC_20171208_Archive_e002141",
+  "center": "GSFC",
+  "credit": "NASA (public domain)"
+ },
+ "w4b": {
+  "title": "Byrd Glacier, Antarctica",
+  "nasa_id": "PIA11419",
+  "center": "JPL",
+  "credit": "NASA (public domain)"
+ },
+ "w5a": {
+  "title": "iss066e146457",
+  "nasa_id": "iss066e146457",
+  "center": "JSC",
+  "credit": "NASA (public domain)"
+ },
+ "w5b": {
+  "title": "Lena Delta",
+  "nasa_id": "GSFC_20171208_Archive_e002160",
+  "center": "GSFC",
+  "credit": "NASA (public domain)"
+ }
+}
