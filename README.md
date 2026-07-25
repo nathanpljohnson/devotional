@@ -68,13 +68,37 @@ serve.py                        local static server: python3 serve.py -> :8077
 
 ## Editing content
 
-Content lives in `scripts/build_days.py`. Edit it and re-run:
+Content lives in `scripts/build_days.py` (days, quotes, framing) and `scripts/build_people.py`
+(the index). Edit those, then run one command:
 
 ```bash
-cd scripts && python3 build_days.py && python3 build_people.py
+python3 scripts/build.py
 ```
 
-Then bump `VERSION` in `sw.js` so phones pick up the change instead of serving the cached copy.
+That rebuilds `days.json`, `people.json`, and `sw.js`. Then commit and push.
+
+**You do not need to bump a version by hand.** `sw.js` carries a `VERSION` that is a SHA-256
+hash of every shipped file, so any change to any file produces a new worker automatically —
+and an unchanged build produces the identical hash, so there are no pointless updates.
+
+Do run `build.py` if you change an image or JSON directly rather than via the scripts —
+that is what recomputes the hash.
+
+### How an update actually reaches the phone
+
+1. Push. GitHub Pages serves with `cache-control: max-age=600`, so allow **up to 10 minutes**
+   before the new files are visible at the edge.
+2. Open the app on wifi. HTML, CSS, JS and JSON are fetched **network-first** (3s timeout,
+   falling back to cache), so fresh content appears on that load.
+3. Separately, Safari notices `sw.js` changed, installs the new worker, re-caches everything,
+   and deletes the old cache. When it takes over, the app reloads itself once so you are not
+   left looking at a stale screen.
+
+Images are served **cache-first** because they are 13 MB and almost never change; when one
+does change, the new `VERSION` wipes the old cache and re-fetches it.
+
+If you ever want to force a clean slate on the phone: delete the home-screen icon, then in
+Settings → Safari → Advanced → Website Data, remove the `github.io` entry, then re-add it.
 
 ## Local development
 

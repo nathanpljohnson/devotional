@@ -262,6 +262,15 @@ async function boot() {
 
   // ?nosw=1 skips offline caching — useful while editing
   if ('serviceWorker' in navigator && !location.search.includes('nosw')) {
+    // If a NEW worker takes over an already-controlled page, the content on screen is
+    // stale — reload once so an edit shows up without needing a manual second open.
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hadController || reloaded) return;
+      reloaded = true;
+      location.reload();
+    });
     try { await navigator.serviceWorker.register('sw.js'); } catch (e) { console.warn(e); }
   }
 }
